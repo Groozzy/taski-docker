@@ -152,7 +152,7 @@ jobs:
           host: ${{ secrets.YA_SERVER_HOST }}
           username: ${{ secrets.YA_SERVER_USER }}
           key: ${{ secrets.YA_SERVER_SSH_KEY }}
-          passphrase: ${{ secrets.YA_SERVER_PASSPHRASE }}
+          passphrase: ${{ secrets.YA_SERVER_SSH_PASSPHRASE }}
           source: "docker-compose.production.yml"
           target: "taski"
 
@@ -162,7 +162,7 @@ jobs:
           host: ${{ secrets.YA_SERVER_HOST }}
           username: ${{ secrets.YA_SERVER_USER }}
           key: ${{ secrets.YA_SERVER_SSH_KEY }}
-          passphrase: ${{ secrets.YA_SERVER_PASSPHRASE }}
+          passphrase: ${{ secrets.YA_SERVER_SSH_PASSPHRASE }}
           script: |
             cd taski
             sudo docker compose -f docker-compose.production.yml pull
