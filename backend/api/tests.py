@@ -11,7 +11,7 @@ class TaskiApiTestCase(TestCase):
     def test_list_exists(self):
         """Проверка доступности списка задач."""
         response = self.guest_client.get('/api/tasks/')
-        self.assertEqual(response.status_code, HTTPStatus.ok)
+        self.assertEqual(response.status_code, HTTPStatus.OK)
 
     def test_task_creation(self):
         """Проверка создания задачи."""
